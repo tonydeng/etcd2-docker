@@ -14,7 +14,7 @@ RUN apk add --update ca-certificates openssl tar && \
 
 # listen on all interfaces
 ENV ECTD_LISTEN_CLIENT_URLS=http://0.0.0.0:2379,http://0.0.0.0:4001
-ENV ETCD_ADVERTISE_CLIENT_URLS=http://localhost:2379
+ENV ETCD_ADVERTISE_CLIENT_URLS=http://0.0.0.0:2379
 
 VOLUME /data
 EXPOSE 2379 2380 4001 7001
