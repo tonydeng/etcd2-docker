@@ -2,10 +2,10 @@
 
 # check for $CLIENT_URLS
 if [ -z ${ECTD_LISTEN_CLIENT_URLS+x} ]; then
-    CLIENT_URLS="http://0.0.0.0:4001,http://0.0.0.0:2379"
-    echo "Using default CLIENT_URLS ($ECTD_LISTEN_CLIENT_URLS)"
+    ECTD_LISTEN_CLIENT_URLS="http://0.0.0.0:4001,http://0.0.0.0:2379"
+    echo "Using default ECTD_LISTEN_CLIENT_URLS ($ECTD_LISTEN_CLIENT_URLS)"
 else
-    echo "Detected new CLIENT_URLS value of $ECTD_LISTEN_CLIENT_URLS"
+    echo "Detected new ECTD_LISTEN_CLIENT_URLS value of $ECTD_LISTEN_CLIENT_URLS"
 fi
 
 # check for $PEER_URLS
